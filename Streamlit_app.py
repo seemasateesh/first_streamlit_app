@@ -51,6 +51,4 @@ streamlit.write('Thanks for adding ' ,add_my_fruit )
 
 mycur.execute("insert into fruit_load_list ('from streamlit')")
 
-my_data_row = my_cur.fetchall()
-streamlit.header("The fruit load list contains")
-streamlit.dataframe(my_data_row)
+
