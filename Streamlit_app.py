@@ -51,4 +51,9 @@ streamlit.write('Thanks for adding ' ,add_my_fruit )
 
 
 mycur.execute("insert into fruit_load_list values  (select 'streamlit')")
-
+my_cnx.commit()
+  
+print(my_cur.rowcount, "details inserted")
+  
+# disconnecting from server
+my_cnx.close()
