@@ -49,7 +49,7 @@ streamlit.header("The fruit load list contains")
 streamlit.dataframe(my_data_row)
 
 
-my_cur.execute(" insert into fruit_load_list values  (select 'streamlit') ")
+my_cur.execute(" insert into fruit_load_list values  (from 'streamlit') ")
 #my_cnx.commit()
 
 # Allow end user to add a fruit to the list
