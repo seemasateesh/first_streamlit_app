@@ -54,5 +54,6 @@ my_cnx = snowflake.connector.connect(**streamlit.secrets['snowflake'])
 my_cur1 = my_cnx.cursor()
 
 mycur1.execute("insert into fruit_load_list ('from streamlit')")
+mycur1.close()
 
 
