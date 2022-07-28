@@ -1,3 +1,5 @@
+import streamlit as st
+
 # Delete a single key-value pair
 del st.session_state[key]
 
