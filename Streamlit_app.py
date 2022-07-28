@@ -51,9 +51,14 @@ streamlit.write('Thanks for adding ' ,add_my_fruit )
 
 
 my_cnx = snowflake.connector.connect(**streamlit.secrets['snowflake'])
-my_cur1 = my_cnx.cursor()
+my_cur = my_cnx.cursor()
 
-my_cnx.mycur1.execute("insert into fruit_load_list ('from streamlit')")
+mycur.execute("insert into fruit_load_list ('from streamlit')")
 
 
-
+my_cnx.commit()
+  
+print(my_cur.rowcount, "details inserted")
+  
+# disconnecting from server
+my_cnx.close()
